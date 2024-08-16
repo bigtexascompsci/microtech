@@ -15,6 +15,13 @@
       "when": 1723677572141,
       "tag": "0001_many_peter_quill",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1723783018369,
+      "tag": "0002_foamy_roughhouse",
+      "breakpoints": true
     }
   ]
 }

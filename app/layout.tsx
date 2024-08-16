@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
 import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+// Configure fonts
+import { inter } from "@/lib/utils";
 
+// Metadata for application
+import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Microtech",
-  description: "Instantly answer questions from your documents effortlessly",
+  title: "microtech",
+  description: "answer questions from your documents",
 };
 
+// Root layout component
 export default function RootLayout({
   children,
 }: Readonly<{
