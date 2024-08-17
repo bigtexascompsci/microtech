@@ -14,8 +14,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 
 import { UploadDropzone } from "@/app/uploadthing";
 

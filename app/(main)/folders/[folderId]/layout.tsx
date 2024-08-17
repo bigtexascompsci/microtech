@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 
 import { UploadForm } from "./Upload";
 
+import Link from "next/link";
+
 async function fetchDocuments(folderId: number) {
   const response = await fetch("http://localhost:3000/api/getDocuments", {
     method: "POST",
@@ -78,27 +80,34 @@ export default function Layout({
 
   return (
     <>
-      <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-96 lg:flex-col">
-        {/* Sidebar component, swap this element with another sidebar if you like */}
-        <div className="flex grow flex-col overflow-y-auto text-card-foreground px-8 py-6 border">
-          <div className="text-lg font-semibold flex items-center justify-between mb-2">
-            Documents
-            <UploadForm
-              folderId={params.folderId}
-              onUploadCreated={refreshDocuments}
-            />
+      <div className="relative w-screen h-screen">
+        <div className="relative isolate flex min-h-svh inset-y-0 left-0 w-screen">
+          {/* Sidebar component, swap this element with another sidebar if you like */}
+          <div className="flex grow w-[600px] flex-col overflow-y-auto text-card-foreground px-8 py-6 border">
+            <div className="text-lg font-semibold flex items-center justify-between mb-2">
+              Documents
+              <UploadForm
+                folderId={params.folderId}
+                onUploadCreated={refreshDocuments}
+              />
+            </div>
+            <div className="flex flex-col">
+              {documentsList.map((document) => (
+                <Link
+                  href={`/folders/${params.folderId}/${document.id}`}
+                  key={document.id}
+                >
+                  <Button
+                    variant="link"
+                    className="w-full justify-start text-left text-sm mb-[-8px] pl-0"
+                  >
+                    {document.name}
+                  </Button>
+                </Link>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-col">
-            {documentsList.map((document) => (
-              <Button
-                key={document.id}
-                variant="link"
-                className="w-full justify-start text-left text-sm mb-[-8px] pl-0"
-              >
-                {document.name}
-              </Button>
-            ))}
-          </div>
+          <div className="w-full">{children}</div>
         </div>
       </div>
     </>

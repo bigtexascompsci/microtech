@@ -4,5 +4,5 @@ export default function FolderPage({
   params: { folderId: number };
 }) {
   console.log(params);
-  return <p className="text-2xl">{params.folderId}</p>;
+  return <p className="text-2xl">Click on something</p>;
 }
