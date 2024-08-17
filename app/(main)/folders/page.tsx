@@ -9,7 +9,6 @@ import { ModeToggle } from "@/components/mode-toggle";
 async function fetchFolders() {
   const response = await fetch("http://localhost:3000/api/getFolders", {
     method: "GET",
-    next: { revalidate: 1 }, // Revalidate every 5 seconds
   });
 
   if (!response.ok) {

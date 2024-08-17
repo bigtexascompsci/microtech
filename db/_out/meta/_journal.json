@@ -22,6 +22,20 @@
       "when": 1723783018369,
       "tag": "0002_foamy_roughhouse",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1723850918950,
+      "tag": "0003_loud_guardian",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1723851290572,
+      "tag": "0004_keen_anthem",
+      "breakpoints": true
     }
   ]
 }

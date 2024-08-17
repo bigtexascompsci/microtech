@@ -253,7 +253,7 @@ export const Folder = ({
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link href={`/folders/${folder.name}`}>
+          <Link href={`/folders/${folder.id}`}>
             <Button>Open folder</Button>
           </Link>
         </CardFooter>
