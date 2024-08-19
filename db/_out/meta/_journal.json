@@ -50,6 +50,13 @@
       "when": 1724042254094,
       "tag": "0006_clammy_shockwave",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1724046184205,
+      "tag": "0007_new_may_parker",
+      "breakpoints": true
     }
   ]
 }

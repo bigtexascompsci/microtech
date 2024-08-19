@@ -8,11 +8,12 @@ export const messages = pgTable("messages", {
   chat_id: serial("chat_id")
     .notNull()
     .references(() => chats.id),
-  created_at: timestamp("created_at").notNull(),
+  created_at: timestamp("created_at")
+    .notNull()
+    .default(sql`now()`),
   role: text("role").notNull(),
   content: text("content").notNull(),
   embedding_ids: text("embedding_ids")
     .array()
-    .notNull()
     .default(sql`'{}'::text[]`),
 });
