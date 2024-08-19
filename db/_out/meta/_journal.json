@@ -36,6 +36,20 @@
       "when": 1723851290572,
       "tag": "0004_keen_anthem",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1724041594556,
+      "tag": "0005_skinny_madrox",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1724042254094,
+      "tag": "0006_clammy_shockwave",
+      "breakpoints": true
     }
   ]
 }

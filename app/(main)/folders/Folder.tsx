@@ -68,6 +68,8 @@ async function deleteFolder(id: number) {
     body: JSON.stringify({ id }), // Send the folder ID in the body
   });
 
+  console.log(response.json());
+
   if (!response.ok) {
     throw new Error("Failed to delete folder");
   }

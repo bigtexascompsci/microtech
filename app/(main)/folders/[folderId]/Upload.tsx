@@ -1,8 +1,5 @@
 "use client";
 
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import { useState } from "react";
 import {
   Dialog,
@@ -41,12 +38,12 @@ async function createDocument({
     });
 
     if (!response.ok) {
-      throw new Error("Failed to create folder");
+      throw new Error("Failed to create document");
     }
 
     return response.json();
   } catch (error) {
-    console.error("Error creating folder:", error);
+    console.error("Error creating document:", error);
   }
 }
 
